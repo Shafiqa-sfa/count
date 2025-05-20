@@ -1,15 +1,16 @@
 
 import { useState } from "react"
-const Sample=({myName,myAge,myHobby})=>{
-    return(
-        <div>
-        
-        <h1>I'm {myName}</h1>
-        <h2>My age is {myAge}</h2>
-        <h2>My Hobby is {myHobby}</h2>
+function Sample(){
+    const [count, setCount] = useState(0);
+    console.log(count)
 
-        </div>
-    )
-    
+return (
+    <div>
+        
+        <button className="bg-amber-400 p-2" onClick={() => setCount(count + 1)}>
+                Count {count}
+            </button>
+    </div>
+)
 }
 export default Sample
